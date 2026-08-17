@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>EventHub</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="/" class="logo" aria-label="На главную страницу EventHub">
+          <img
+            src="/images/logo.png"
+            class="logo__image"
+            alt="EventHub — сервис мероприятий"
+          />
+        </a>
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li><a href="#" class="link link--active">Все события</a></li>
+            <li><a href="#" class="link">Концерты</a></li>
+            <li><a href="#" class="link">Спектакли</a></li>
+            <li><a href="#" class="link">Выставки</a></li>
+          </ul>
+        </nav>
+        <button
+          type="button"
+          class="btn btn--outline"
+          aria-label="Выбрать город"
+        >
+          Москва
+        </button>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main class="main">
+      <div class="container">
+        <section class="hero">
+          <h1 class="hero__title">Исследуй EventHub!</h1>
+          <p class="hero__description">Найди событие по душе</p>
+        </section>
+        <!-- FILTERS -->
+        <section class="filters">
+          <h2 class="visually-hidden">Фильтры мероприятий</h2>
+          <form class="filters__form">
+            <div class="filters__row">
+              <div class="filters__group">
+                <label for="event-search" class="filters__label"
+                  >Поиск событий</label
+                >
+                <input
+                  type="search"
+                  id="event-search"
+                  name="search"
+                  class="input"
+                  placeholder="Например, джаз или театр..."
+                />
+              </div>
+              <div class="filters__group">
+                <label for="category-select" class="filters__label"
+                  >Категория</label
+                >
+                <select name="category" id="category-select" class="select">
+                  <option value="">Все категории</option>
+                  <option value="concerts">Концерты</option>
+                  <option value="plays">Спектакли</option>
+                  <option value="exhibitions">Выставки</option>
+                  <option value="stand-ups">Стендапы</option>
+                  <option value="lections">Лекции</option>
+                  <option value="festivals">Фестивали</option>
+                </select>
+              </div>
+
+              <div class="filters__group">
+                <label for="sort-select" class="filters__label"
+                  >Сортировка</label
+                >
+                <select name="sort" id="sort-select" class="select">
+                  <option value="date">По дате</option>
+                  <option value="popular">По популярности</option>
+                  <option value="cheap">Сначала дешевые</option>
+                  <option value="expensive">Сначала дорогие</option>
+                </select>
+              </div>
+              <div class="filters__actions">
+                <button
+                  type="button"
+                  class="btn btn--outline"
+                  id="reset-filters"
+                >
+                  Сбросить фильтры
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <!-- EVENT LIST -->
+        <section class="events">
+          <div class="events__header">
+            <h2 class="events__title">Ближайшие мероприятия</h2>
+          </div>
+          <div class="events__grid" id="events-grid">
+            <!-- Карточки в JavaScript -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 EventHub. Все права защищены.</p>
+      </div>
+    </footer>
+    <!--MODAL WINDOW -->
+    <div class="modal" id="event-modal" hidden>
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <button
+          class="modal__close"
+          type="button"
+          data-close-modal
+          aria-label="Закрыть окно"
+        >
+          ×
+        </button>
+        <div class="modal__body" id="modal-body">
+          <!-- в JavaScript -->
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

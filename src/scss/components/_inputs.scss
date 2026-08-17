@@ -1,0 +1,28 @@
+.filters__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filters__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-text-main;
+}
+
+.input,
+.select {
+  padding: 12px;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  font-family: $font-main;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: $color-primary;
+}

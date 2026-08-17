@@ -1,0 +1,42 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border: none;
+  border-radius: $radius-md;
+  font-weight: 600;
+  font-family: $font-main;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.1s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid $color-border;
+  color: $color-text-main;
+  padding: 8px 16px;
+
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}
+
+.btn--accent {
+  background-color: $color-accent;
+  color: #fff;
+
+  &:hover {
+    background-color: darken($color-accent, 10%);
+  }
+}

@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.footer {
+  border-top: 1px solid $color-border;
+  padding: 24px 0;
+  color: $color-text-secondary;
+}
